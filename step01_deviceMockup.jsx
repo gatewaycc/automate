@@ -4,7 +4,7 @@
 
 
 // OPEN FILE --------------------------------------------------------------------------------------------------------
-// Load step01_deviceMockup.psd file (absolute path)
+// Load step01_deviceMockup.psd file (change absolute path as necessary)
 const deviceMockup = File("D:/automate/workingFiles/step01_deviceMockup.psd");
 app.open(deviceMockup);
 
@@ -33,6 +33,7 @@ app.open(deviceMockup);
                 deviceList.spacing = 10; 
                 deviceList.margins = 10; 
 
+            // DEVICE MOCKUPS
             var device1 = deviceList.add("radiobutton", undefined, undefined, {name: "touchPanel-crestronTSW760B"}); 
                 device1.text = "Touch Panel - Crestron TSW760B";
 
@@ -72,7 +73,7 @@ app.open(deviceMockup);
                 // Assigning smart object for corresponding layer to variable 'smartObjectLayer'
                 var smartObjectLayer = activeDocument.layerSets[0].artLayers[0];
                 // Should return "crestron-tsw760b-screen"
-                alert(smartObjectLayer.name)
+                // alert(smartObjectLayer.name)
                 break;
 
             case device2.value:
@@ -94,5 +95,8 @@ app.open(deviceMockup);
         }
 
 // IMPORT IMAGES ----------------------------------------------------------------------------------------------------
-// Based on user selection, the corresponding smart object should 1) import one image at a time from the folder selected, 2) resize the image to match the canvas size, 3) export the full mockup, and 4) repeat the process till all files within the folder have been imported
-
+// Based on user selection, the corresponding smart object should:
+//   1) Import one image at a time from the folder selected
+//   2) Resize the image to match the canvas size
+//   3) Export the full mockup
+//   4) Repeat the process till all files within the folder have been imported
